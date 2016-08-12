@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="org.wso2.deveoperstudio.eclipse.errorreporter.jirakey" name="JiraKey" schema="schema/org.wso2.deveoperstudio.eclipse.errorreporter.jirakey.exsd"/>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            name="Sample Category"
+            id="ErrorReporterTool.commands.category">
+      </category>
+      <command
+            name="Report Archive"
+            categoryId="ErrorReporterTool.commands.category"
+            id="ErrorReporterTool.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="ErrorReporterTool.commands.sampleCommand"
+            class="org.wso2.developerstudio.eclipse.errorreporter.ui.archivemenu.ReportArchiveHandler">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="ErrorReporterTool.commands.sampleCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="Error Reporter"
+               mnemonic="M"
+               id="ErrorReporterTool.menus.sampleMenu">
+            <command
+                  commandId="ErrorReporterTool.commands.sampleCommand"
+                  mnemonic="S"
+                  id="ErrorReporterTool.menus.sampleCommand">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="ErrorReporterTool.toolbars.sampleToolbar">
+            <command
+                  commandId="ErrorReporterTool.commands.sampleCommand"
+                  icon="icons/sample.gif"
+                  tooltip="Displays the error reports sent to Jira"
+                  id="ErrorReporterTool.toolbars.sampleCommand">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.startup">
+      <startup
+            class="org.wso2.developerstudio.eclipse.errorreporter.startup.Startup">
+      </startup>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="org.wso2.developerstudio.eclipse.errorreporter.ui.preferences.PreferencePage"
+            id="org.wso2.developerstudio.eclipse.errorreporter.page1"
+            name="Developer Studio Error Reporting">
+      </page>
+   </extension>
+    <extension
+    	point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="org.wso2.developerstudio.eclipse.errorreporter.ui.preferences.PreferenceInitializer">
+      </initializer>
+  </extension>
+   
+
+</plugin>
