@@ -13,14 +13,14 @@
 	<name>WSO2 Developer Studio Kernel Plugins</name>
 	<modules>
 		<module>org.wso2.developerstudio.eclipse.errorreporter</module>
-		<!--  module>org.wso2.developerstudio.eclipse.kernel.libraries</module>
+		<module>org.wso2.developerstudio.eclipse.kernel.libraries</module>
 		<module>org.wso2.developerstudio.eclipse.logging</module>
 		<module>org.wso2.developerstudio.eclipse.utils</module>
 		<module>org.wso2.developerstudio.eclipse.maven</module>
 	 	<module>org.wso2.developerstudio.eclipse.platform.core</module>
 		<module>org.wso2.developerstudio.eclipse.platform.ui</module>
 		<module>org.wso2.developerstudio.eclipse.wso2plugin.template.manager</module>
-		<module>org.wso2.developerstudio.eclipse.updater</module-->
+		<module>org.wso2.developerstudio.eclipse.updater</module>
 	</modules>
 	<build>
 		<plugins>

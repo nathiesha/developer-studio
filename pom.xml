@@ -20,10 +20,10 @@
          <id>devsrelease</id>
          <modules>
 					 <module>plugins</module>
-					 <!--  module>features</module>
+					 <module>features</module>
 					 <module>repository</module>
 					 <module>rcp-product</module>
-					 <module>samples</module-->
+					 <module>samples</module>
          </modules>
       </profile>
       <profile>
